@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a6fef35b-34c2-48fb-a887-69432e5967a0" name="ClodProject1" url="http://ec2-34-227-60-208.compute-1.amazonaws.com:5000">
+        <fileTransfer rootFolder="/home/ubuntu" accessType="SFTP" host="ec2-34-227-60-208.compute-1.amazonaws.com" port="22" sshConfigId="25e53d39-bab2-4c63-9236-d11af0fd78b1" sshConfig="ubuntu@ec2-34-227-60-208.compute-1.amazonaws.com:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
