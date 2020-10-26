@@ -13,6 +13,7 @@ import sys
 import time
 import boto3
 import statistics
+import SenderS3
 
 def mathCalculate(valuesList):
     answer = [min(valuesList), max(valuesList), sum(valuesList)/len(valuesList), statistics.median(valuesList)]
@@ -37,6 +38,7 @@ def listToString(entryList):
     resultList = " "
     # return string
     return (resultList.join(map(str, entryList)))
+
 # Starting Project
 # TEST PART
 #s3 = boto3.resource('s3')
@@ -47,6 +49,8 @@ def listToString(entryList):
 
 # Create the queue. This returns an SQS.Queue instance
 sqs = boto3.resource('sqs')
+s3 = boto3.resource('s3')
+key = 'logs1.txt'
 queue = sqs.create_queue(QueueName='CloudComputingProject7')
 #resetMessages(queue)
 while True:
@@ -62,6 +66,7 @@ while True:
             queue = sqs.get_queue_by_name(QueueName='CloudComputingProject8')
             # Create a new message
             response = queue.send_message(MessageBody=sendList)
+            SenderS3.write_logs(sendList, s3, key)
             sys.exit("Stop code")
 
 

@@ -1,10 +1,22 @@
+import atexit
+import io
+import logging
+
 import boto3
 
-s3 = boto3.resource(
-    's3',
-    region_name='us-east-1b',
-    aws_access_key_id='KEY_ID',
-    aws_secret_access_key='ACCESS_KEY'
-)
-content="String content to write to a new S3 file"
-s3.Object('CloudProject1bucket', 'log.txt').put(Body=content)
+
+def write_logs(body, bucket, key):
+    s3 = boto3.client("s3")
+    s3.put_object(Body=body, Bucket=bucket, Key=key)
+
+
+log = logging.getLogger("S3 Logs")
+log_stringio = io.StringIO()
+handler = logging.StreamHandler(log_stringio)
+log.addHandler(handler)
+
+atexit.register(write_logs, body=log_stringio.getvalue(), bucket="testName", key="testKey")
+
+log.info("S3 Test")
+
+quit()
