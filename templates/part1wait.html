@@ -58,30 +58,39 @@
 							<div class="main-content align-center">
 
 								<!-- *** TEXT TITLE *** -->
-								<h1>
+								<h2>
 									Cloud Computing Project
-								</h1>
+								</h2>
 
-								<p class="on-home">Select a part of project:
+
+
+								<p class="on-home">Client Web Message Application
 								</p>
 
 								<br>
+                                <!-- Form -->
+                                    <div class="container">
+                                      <form action="/part1wait" method="POST">
+                                        <label class="on-home" for="Number One">Answer from Server:</label>
+                                        <br />
+										  <input type="submit" value="Get Answer" id="calc_btn"  class="megabtn"/>
+                                        <div class="alert">
+                                          {{ message }}
+                                        </div>
+                                      </form>
+                                    </div>
 
 								<div class="command">
 
-									<a  href=part1  id="popup_somedialog_1" data-dialog="somedialog_1" class="trigger light-btn colored">
+									<!-- ********** IF YOU WANT TO USE MORE POPUPS, SEE THE RECOMMENDATIONS AT THE END OF js/dialogFx.js ********** -->
+									<a  href="/" id="popup_somedialog_1" data-dialog="somedialog_1" class="trigger light-btn colored">
 
-										<span id="first-text">Part 1 Messages</span>
+										<span id="first-text">Return to main Menu</span>
 
-										<span id="second-text">Go to Part 1</span> <!-- On this span, it's important to use a text smaller or equal than the first one (here: Weekly Newsletter) to avoid any troubles -->
+										<span id="second-text">Go to Main</span> <!-- On this span, it's important to use a text smaller or equal than the first one (here: Weekly Newsletter) to avoid any troubles -->
 									</a>
 
-                                    <a  href=part2 id="popup_somedialog_1" data-dialog="somedialog_1" class="trigger light-btn colored">
 
-										<span id="first-text">Part 2 Images</span>
-
-										<span id="second-text">Go to Part 2</span> <!-- On this span, it's important to use a text smaller or equal than the first one (here: Weekly Newsletter) to avoid any troubles -->
-									</a>
 
 									<div class="clear"></div>
 
@@ -93,6 +102,7 @@
 
 			</div>
 			<!-- +++ END - Home +++ -->
+
 
 		</div>
 		<!-- +++ / Fullpage sections +++ -->
