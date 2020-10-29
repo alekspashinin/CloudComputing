@@ -56,7 +56,7 @@ s3 = boto3.resource('s3')
 bucket = s3.Bucket('mybucketnumber1')
 key = 'CloudLogs.txt'
 print('Received: ')
-queue = sqs.create_queue(QueueName='CloudComputingProject7')
+queue = sqs.create_queue(QueueName='requestQueue3')
 # resetMessages(queue)
 while True:
     messages = queue.receive_messages()
@@ -69,10 +69,10 @@ while True:
         print('Result of Calculation: ', mathCalculate(resultList))
         sendList = listToString(mathCalculate(resultList))
         print('Send Message: ', sendList)
-        queue = sqs.get_queue_by_name(QueueName='CloudComputingProject8')
+        queue = sqs.get_queue_by_name(QueueName='responseQueue3')
         # Create a new message
         response = queue.send_message(MessageBody=sendList)
-        SS3.writefile(sendList, bucket, key)
+        SS3.write_logs(sendList, 'mybucketnumber1', key)
         sys.exit("Stop code")
 
 # GENERAL MAIN

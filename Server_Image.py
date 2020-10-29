@@ -21,18 +21,16 @@ sqs = boto3.resource('sqs')
 s3 = boto3.resource('s3')
 queue = sqs.create_queue(QueueName='outbox1')
 while True:
+    print("Wait for images...")
     messages = queue.receive_messages()
     for message in messages:
         # WATING FOR RECIEVING A REQUEST FROM WEB APP FOR IMAGE PROCCESING
         print("New request for image processing is recieved!")
         tempos = message.body
-        print(tempos)
         resultList = list(tempos.split(" "))
         message.delete()
         key = resultList[0]
         bucketName = resultList[1]
-        print(key)
-        print(bucketName)
         myBucket = s3.Bucket(bucketName)
         myBucket.download_file(key, 'image.jpg')
         time.sleep(5)
