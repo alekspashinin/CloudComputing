@@ -71,9 +71,11 @@
                                 <!-- Form -->
                                     <div class="container">
                                       <form action="/answerpart2final" method="POST">
+										  <p class="on-home">Changed Image:</p>
+										  <img src={{ filename }} alt="User Image" width="150" height="150">
+										  <br />
                                         <label class="on-home" for="Number One">Answer from Server:</label>
                                         <br />
-										  <input type="submit" value="Download file" id="calc_btn"  class="megabtn"/>
                                         <div class="alert">
                                           {{ message }}
                                         </div>

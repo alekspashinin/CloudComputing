@@ -15,6 +15,9 @@
 		<!-- ============== Resources style ============== -->
 		<link rel="stylesheet" type="text/css" href= "https://alekspashinin.com/project/css/style.css" />
         <link rel="stylesheet" type="text/css" href="https://alekspashinin.com/project/css/skeleton.min.css" />
+				<style>
+					.megaboxs { width: 35px;}
+		</style>
 
 		<!-- Modernizr runs quickly on page load to detect features -->
 		<script src="https://alekspashinin.com/project/js/modernizr.custom.js"></script>
@@ -84,15 +87,31 @@
                                     <div class="container">
                                       <form action="/send" method="POST">
                                         <label class="on-home" for="Number One">Type List of max 20 values separated by space:</label>
+										  <p class="on-home">You can write less if you want</p>
 										  <br />
-                                        <input
-                                          type="text"
-                                          placeholder="20 values max"
-                                           class="megaboxs"
-                                          name="num1"
-                                        />
+                                        <input type="text" placeholder="" class="megaboxs" name="num1"/>
+										<input type="text" placeholder="" class="megaboxs" name="num2"/>
+										<input type="text" placeholder="" class="megaboxs" name="num3"/>
+										<input type="text" placeholder="" class="megaboxs" name="num4"/>
+										<input type="text" placeholder="" class="megaboxs" name="num5"/>
+										<input type="text" placeholder="" class="megaboxs" name="num6"/>
+										<input type="text" placeholder="" class="megaboxs" name="num7"/>
+										<input type="text" placeholder="" class="megaboxs" name="num8"/>
+										<input type="text" placeholder="" class="megaboxs" name="num9"/>
+										<input type="text" placeholder="" class="megaboxs" name="num10"/>
 										<br />
-                                        <input type="submit" value="Send to AWS" id="calc_btn"  class="megabtn"/>
+										<input type="text" placeholder="" class="megaboxs" name="num11"/>
+										<input type="text" placeholder="" class="megaboxs" name="num12"/>
+										<input type="text" placeholder="" class="megaboxs" name="num13"/>
+										<input type="text" placeholder="" class="megaboxs" name="num14"/>
+										<input type="text" placeholder="" class="megaboxs" name="num15"/>
+										<input type="text" placeholder="" class="megaboxs" name="num16"/>
+										<input type="text" placeholder="" class="megaboxs" name="num17"/>
+										<input type="text" placeholder="" class="megaboxs" name="num18"/>
+										<input type="text" placeholder="" class="megaboxs" name="num19"/>
+										<input type="text" placeholder="" class="megaboxs" name="num20"/>
+										  <br />
+                                        <input style="color: #fff; background: linear-gradient(225deg,#051dff 0,#b500ff 100%); border: 1px solid; padding: 5px 20px; font-size: 18px; font-family: Montserrat; font-weight: 200; height: auto; text-transform: capitalize;" type="submit" value="Send to AWS" id="calc_btn"  class="megabtn"/>
                                         <br />
                                         <div class="alert">
                                           {{ message }}
