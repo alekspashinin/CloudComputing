@@ -33,7 +33,10 @@ For the Client side, we just need to "run app.py" that is our web application lo
 # References
 
 [1.]	https://en.wikipedia.org/wiki/Amazon_Web_Services
+
 [2.]	https://aws.amazon.com/ec2/
+
 [3.]	https://aws.amazon.com/s3/
+
 [4.]	https://aws.amazon.com/sqs/
 
