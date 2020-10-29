@@ -28,7 +28,7 @@ is a python code hosted on cloud and runs on an EC2 instance in order to reads t
 
 # How to Run and Test 
 
-For the Client side, we just need to "run app.py" that is our web application located in web-app branch. Everything is well described in the web application and client need to do nothing but to input data for CloudCal and a picture for CloudPic. On the server side, we need to run "EC2Worker.py" and "Server_Image.py" on EC2 Instances respectively that are located in the server branch.
+For the Client side, we just need to "run app.py" that is our web application located in web-app branch. Everything is well described in the web application and client need to do nothing but to input data for CloudCal and a picture for CloudPic. On the server side, we need to run "EC2Worker.py" and "Server_Image.py" on EC2 Instances for CloudCal and CloudPic respectively that are located in the server branch.
 
 # References
 
